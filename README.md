@@ -1,97 +1,73 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# ParkMe
 
-# Getting Started
+ParkMe is a smart parking system designe to help users check the number ov available parking spaces at a specific aprking location before arriving at their destination or while already in the city.
+The system combines a React Native mobile application with Firebase and physical parking model built using Arduino Uno, an ESP Wi-Fi module, ultrasonic sensors and servo motor.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+*  View the number of available parking spaces in real time
+*  Check the current parking availability before arriving at a location
+*  Monitor parking availability while already in the city
+*  Receeive real-time updates from the physical parking model
+*  Automatically control the parking barrier
+*  Track the number of occupied parking spaces
+*  Prevent vehicles from entering whem the parking capacity is reached
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## How It Works
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+The physical parking model communicates with the mobile application through Firebase.
 
-```sh
-# Using npm
-npm start
+1. An ultrasonic sensor detects a vehicle approaching the parking entrance.
+2. The Ultrasonic Sensor precesses input and communicates with ESP 8266 Wi-Fi module.
+3. The ESP module sends the parking status to the Firebase Realtime Database.
+4. A servo motor controls the parking barrier based on the current parking state.
+5. When a vehicle enters the parking area, the number of occupied spaces is increased.
+6. When a vehicle leaves, the number of occupied spaces is decreased.
+7. The mobile application receives the updated data from Firebase in real time.
+8. When the parking lot reaches its maximum capacity, the entrance barrier remains closed while the exit remains available.
 
-# OR using Yarn
-yarn start
-```
+ ## System Architecture
 
-## Step 2: Build and run your app
+ ```mermaid
+flowchart TD
+  A[Phisical Parking Model] --> B[Ultrasonic Sensors]
+  B --> C[ESP 8266 Wi-Fi Module]
+  C --> D[Firebase Database]
+  D --> E[React Native Mobile Application]
+ ```
+This allows the mobile application to display the current parking availability based on the real-time state of the physical parking model.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## Technologies
 
-### Android
+* React Native
+* JavaScript
+* Firebase
+* Arduino Uno
+* ESP 8266 Wi-Fi Module
+* Ultrasonic Sensors
+* Servo Motor
 
-```sh
-# Using npm
-npm run android
+## Screenshots
 
-# OR using Yarn
-yarn android
-```
+Screenshots of the application will be added here
 
-### iOS
+## Project Demonstarion
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+A video presentation demonstrating the ParkMe system and its functionality is available here:
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## Team Project
 
-```sh
-bundle install
-```
+ParkMe was developed as a collaborative project of the team "NZ DEVS"
 
-Then, and every time you update your native dependencies, run:
+### Contributors
 
-```sh
-bundle exec pod install
-```
+* Vladimir Erić
+* Stefan Marinković
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## Future Improvements
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+* Support for multiple parking locations
+* Integration with real-world parking infrastructure
+* Parking reservation functionality
+* User accounts and personalized parking history
+* Expansion of the system to support larger parking facilities
