@@ -1,7 +1,7 @@
 # ParkMe
 
-ParkMe is a smart parking system designe to help users check the number ov available parking spaces at a specific aprking location before arriving at their destination or while already in the city.
-The system combines a React Native mobile application with Firebase and physical parking model built using Arduino Uno, an ESP Wi-Fi module, ultrasonic sensors and servo motor.
+<p>ParkMe is a smart parking system designe to help users check the number ov available parking spaces at a specific aprking location before arriving at their destination or while already in the city.</p>
+<p>The system combines a React Native mobile application with Firebase and physical parking model built using Arduino Uno, an ESP Wi-Fi module, ultrasonic sensors and servo motor.</p>
 
 ## Features
 
