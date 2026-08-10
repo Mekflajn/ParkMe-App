@@ -71,7 +71,3 @@ ParkMe was developed as a collaborative project of the team "NZ DEVS"
 * Parking reservation functionality
 * User accounts and personalized parking history
 * Expansion of the system to support larger parking facilities
-
- ```javascript
-console.log("Hello");
-```
