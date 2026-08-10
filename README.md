@@ -53,8 +53,8 @@ Screenshots of the application will be added here
 
 ## Project Demonstration
 
-A video presentation demonstrating the ParkMe system and its functionality is available here:
-<a href="https://youtu.be/GiUQYkAQYYE">
+[▶️ Watch the ParkMe demonstarion on YouTube](https://youtu.be/GiUQYkAQYYE")
+
 
 ## Team Project
 
