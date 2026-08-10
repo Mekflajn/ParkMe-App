@@ -49,7 +49,16 @@ This allows the mobile application to display the current parking availability b
 
 ## Screenshots
 
-Screenshots of the application will be added here
+<p align="center" padding="10">
+  <img src="screenshots/map.jpg" width="200">
+  <img src="screenshots/home.jpg" width="200">
+</p>
+
+<p align="center" padding="10">
+  <img src="screenshots/locations.jpg" width="200">
+  <img src="screenshots/location1.jpg" width="200">
+  <img src="screenshots/location11.jpg" width="200">
+</p>
 
 ## Project Demonstration
 
