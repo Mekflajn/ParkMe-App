@@ -1,6 +1,6 @@
 # ParkMe
 
-<p>ParkMe is a smart parking system designe to help users check the number ov available parking spaces at a specific aprking location before arriving at their destination or while already in the city.</p>
+<p>ParkMe is a smart parking system designed to help users check the number of available parking spaces at a specific parking location before arriving at their destination or while already in the city.</p>
 <p>The system combines a React Native mobile application with Firebase and physical parking model built using Arduino Uno, an ESP Wi-Fi module, ultrasonic sensors and servo motor.</p>
 
 ## Features
@@ -8,17 +8,17 @@
 *  View the number of available parking spaces in real time
 *  Check the current parking availability before arriving at a location
 *  Monitor parking availability while already in the city
-*  Receeive real-time updates from the physical parking model
+*  Receive real-time updates from the physical parking model
 *  Automatically control the parking barrier
 *  Track the number of occupied parking spaces
-*  Prevent vehicles from entering whem the parking capacity is reached
+*  Prevent vehicles from entering when the parking capacity is reached
 
 ## How It Works
 
 The physical parking model communicates with the mobile application through Firebase.
 
 1. An ultrasonic sensor detects a vehicle approaching the parking entrance.
-2. The Ultrasonic Sensor precesses input and communicates with ESP 8266 Wi-Fi module.
+2. The Ultrasonic Sensor processes input and communicates with ESP 8266 Wi-Fi module.
 3. The ESP module sends the parking status to the Firebase Realtime Database.
 4. A servo motor controls the parking barrier based on the current parking state.
 5. When a vehicle enters the parking area, the number of occupied spaces is increased.
@@ -30,7 +30,7 @@ The physical parking model communicates with the mobile application through Fire
 
  ```mermaid
 flowchart TD
-  A[Phisical Parking Model] --> B[Ultrasonic Sensors]
+  A[Physical Parking Model] --> B[Ultrasonic Sensors]
   B --> C[ESP 8266 Wi-Fi Module]
   C --> D[Firebase Database]
   D --> E[React Native Mobile Application]
@@ -51,9 +51,10 @@ This allows the mobile application to display the current parking availability b
 
 Screenshots of the application will be added here
 
-## Project Demonstarion
+## Project Demonstration
 
 A video presentation demonstrating the ParkMe system and its functionality is available here:
+[Watch the ParkMe demonstration on YouTube](<a href="https://youtu.be/GiUQYkAQYYE">)
 
 ## Team Project
 
