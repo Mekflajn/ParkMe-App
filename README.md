@@ -18,7 +18,7 @@
 The physical parking model communicates with the mobile application through Firebase.
 
 1. An ultrasonic sensor detects a vehicle approaching the parking entrance.
-2. The Ultrasonic Sensor processes input and communicates with ESP 8266 Wi-Fi module.
+2. The Ultrasonic Sensor detects the vehicle awnd sends teh measured distance to the ESP8266 Wi-Fi module.
 3. The ESP module sends the parking status to the Firebase Realtime Database.
 4. A servo motor controls the parking barrier based on the current parking state.
 5. When a vehicle enters the parking area, the number of occupied spaces is increased.
